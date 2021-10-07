@@ -1,0 +1,48 @@
+{
+	"name": "dodo-ui",
+	"version": "0.0.1",
+	"description": "Simple React Component + Utility hooks library",
+	"main": "dist/cjs/index.js",
+	"module": "dist/esm/index.js",
+	"files": [
+		"dist"
+	],
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "rollup -c"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Dodobrat/dodo-ui.git"
+	},
+	"keywords": [
+		"react",
+		"components",
+		"library",
+		"ui",
+		"utility"
+	],
+	"author": "Deyan Bozhilov",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Dodobrat/dodo-ui/issues"
+	},
+	"homepage": "https://github.com/Dodobrat/dodo-ui#readme",
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "21.0.0",
+		"@rollup/plugin-node-resolve": "13.0.5",
+		"@rollup/plugin-typescript": "8.2.5",
+		"@types/react": "17.0.27",
+		"@types/styled-components": "5.1.15",
+		"react": "17.0.2",
+		"rollup": "2.58.0",
+		"rollup-plugin-dts": "4.0.0",
+		"rollup-plugin-peer-deps-external": "2.2.4",
+		"rollup-plugin-terser": "7.0.2",
+		"styled-components": "5.3.1",
+		"typescript": "4.4.3"
+	},
+	"peerDependencies": {
+		"react": ">=16.8.0"
+	}
+}
