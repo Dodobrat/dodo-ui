@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const StyledButton = styled.button`
+	display: inline-grid;
 	color: palevioletred;
 	font-size: 1em;
 	margin: 1em;
