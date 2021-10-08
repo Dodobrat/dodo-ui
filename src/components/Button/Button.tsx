@@ -6,7 +6,7 @@ import StyledButton from "./StyledButton.styled";
 const Button: React.ForwardRefRenderFunction<unknown, ButtonProps> = (props) => {
 	const { role = "button", isLoading, children, ...rest } = props;
 
-	console.log(isLoading);
+	// console.log(isLoading);
 
 	return <StyledButton {...rest}>{children}</StyledButton>;
 };
