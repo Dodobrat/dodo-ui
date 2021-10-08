@@ -1,2 +1,6 @@
-node_modules
-dist
+# Folders to ignore
+node_modules/
+dist/
+
+# Files to ignore
+stats.html
