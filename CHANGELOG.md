@@ -4,7 +4,7 @@
 
 -   Add utility hooks + utility functions
 
-## Hooks
+### Hooks
 
 ```
 useDebounce
@@ -21,7 +21,7 @@ useToggle
 useWindowSize
 ```
 
-## Functions / Constants
+### Functions / Constants
 
 ```
 canUseDOM
