@@ -8,12 +8,11 @@
 	],
 	"types": "dist/index.d.ts",
 	"title": "Dodo UI",
-	"description": "Simple React Component Library + Utility hooks library",
+	"description": "Simple React Component Library + Utility hooks and functions",
 	"scripts": {
-		"build": "rollup -c",
+		"clean": "rimraf dist",
+		"build": "npm run clean && rollup -c",
 		"build:watch": "rollup -c -w",
-		"storybook": "start-storybook -p 6006",
-		"storybook:build": "build-storybook",
 		"prepublishOnly": "npm run build"
 	},
 	"repository": {
@@ -34,25 +33,15 @@
 		"url": "https://github.com/Dodobrat/dodo-ui/issues"
 	},
 	"homepage": "https://github.com/Dodobrat/dodo-ui#readme",
-	"peerDependencies": {
-		"react": ">=16.8.0",
-		"react-dom": ">=16.8.0"
-	},
 	"devDependencies": {
-		"@babel/core": "7.15.8",
-		"@react-theming/storybook-addon": "1.1.1",
 		"@rollup/plugin-commonjs": "21.0.0",
 		"@rollup/plugin-node-resolve": "13.0.5",
 		"@rollup/plugin-typescript": "8.2.5",
-		"@storybook/addon-actions": "6.3.10",
-		"@storybook/addon-essentials": "6.3.10",
-		"@storybook/addon-links": "6.3.10",
-		"@storybook/react": "6.3.10",
 		"@types/react": "17.0.27",
 		"@types/styled-components": "5.1.15",
-		"babel-loader": "8.2.2",
+		"classnames": "2.3.1",
 		"react": "17.0.2",
-		"react-dom": "17.0.2",
+		"rimraf": "3.0.2",
 		"rollup": "2.58.0",
 		"rollup-plugin-dts": "4.0.0",
 		"rollup-plugin-peer-deps-external": "2.2.4",
@@ -61,5 +50,8 @@
 		"rollup-plugin-visualizer": "5.5.2",
 		"styled-components": "5.3.1",
 		"typescript": "4.4.3"
+	},
+	"peerDependencies": {
+		"react": ">=16.8.0"
 	}
 }

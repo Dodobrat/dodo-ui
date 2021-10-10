@@ -1,6 +1,6 @@
-import { ElemType } from "../../types";
+import { CnCh, ElemType } from "../../types";
 
-type Globals = ElemType;
+type Globals = ElemType & CnCh;
 
 export interface ButtonProps extends Globals {
 	role?: string;
