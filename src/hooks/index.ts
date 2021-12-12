@@ -8,6 +8,11 @@ export { default as useOnKeyPress } from "./useOnKeyPress";
 export { default as usePrefersDarkMode } from "./usePrefersDarkMode";
 export { default as usePrefersReducedMotion } from "./usePrefersReducedMotion";
 export { default as useSize } from "./useSize";
+export { default as usePointerDevice } from "./usePointerDevice";
 export { default as useSmartEffect } from "./useSmartEffect";
 export { default as useToggle } from "./useToggle";
+export { default as useWindowFocus } from "./useWindowFocus";
 export { default as useWindowSize } from "./useWindowSize";
+
+export { useIsTouchDevice } from "./usePointerDevice";
+export { useIsDesktopDevice } from "./usePointerDevice";

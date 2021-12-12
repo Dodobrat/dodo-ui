@@ -1,16 +1,13 @@
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-	display: inline-grid;
-	gap: 1em;
+	display: inline-block;
 	position: relative;
 
 	margin: 0;
 	padding: calc(1em * 0.625) 1em;
-	width: auto;
-	height: auto;
 
-	font-weight: 400;
+	font-weight: normal;
 	font-size: 1rem;
 	text-decoration: none;
 	vertical-align: middle;
@@ -21,7 +18,6 @@ const StyledButton = styled.button`
 	border: none;
 
 	&:disabled {
-		/* cursor: not-allowed; */
 		pointer-events: none;
 		opacity: 0.5;
 	}

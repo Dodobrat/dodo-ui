@@ -1,5 +1,6 @@
-import { useCallback, useEffect, useMemo } from "react";
-import { canUseDOM } from "../helpers";
+import { useCallback, useMemo } from "react";
+
+import useSmartEffect from "./useSmartEffect";
 
 interface useEventListenerConfigProps {
 	el?: (Window & typeof globalThis) | HTMLElement | any;
@@ -13,9 +14,7 @@ const useEventListener: useEventListenerType = (e, handler, config) => {
 
 	const callback = useCallback((e: Event) => handler?.(e), [handler]);
 
-	useEffect(() => {
-		if (!canUseDOM) return;
-
+	useSmartEffect(() => {
 		if (el) {
 			el.addEventListener(e, callback, eventOptions);
 			return () => el.removeEventListener(e, callback, eventOptions);

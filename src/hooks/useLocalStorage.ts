@@ -7,7 +7,6 @@ type setValueType = (value: any) => void;
 const useLocalStorage: useLocalStorageType = (key, initialValue) => {
 	const [storedValue, setStoredValue] = useState<any>(() => {
 		if (!canUseDOM) return;
-
 		try {
 			const item = window.localStorage.getItem(key);
 			return item ? JSON.parse(item) : initialValue;
@@ -19,7 +18,6 @@ const useLocalStorage: useLocalStorageType = (key, initialValue) => {
 
 	const setValue: setValueType = (value) => {
 		if (!canUseDOM) return;
-
 		try {
 			const valueToStore = value instanceof Function ? value(storedValue) : value;
 			setStoredValue(valueToStore);

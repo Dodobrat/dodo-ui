@@ -1,5 +1,6 @@
-import { useCallback, useEffect } from "react";
-import { canUseDOM } from "../helpers";
+import { useCallback } from "react";
+
+import useSmartEffect from "./useSmartEffect";
 
 interface useOnKeyPressConfigProps {
 	dir?: "down" | "up";
@@ -20,9 +21,7 @@ const useOnKeyPress: useOnKeyPressType = (key, handler, config) => {
 		[handler]
 	);
 
-	useEffect(() => {
-		if (!canUseDOM) return;
-
+	useSmartEffect(() => {
 		window.addEventListener(`key${eventDirection}`, callback, eventOptions);
 		return () => window.removeEventListener(`key${eventDirection}`, callback, eventOptions);
 	}, [key]);

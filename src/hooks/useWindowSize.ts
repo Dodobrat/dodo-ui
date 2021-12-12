@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import { canUseDOM } from "../helpers";
 import useEventListener from "./useEventListener";
 
